@@ -1,0 +1,87 @@
+  <% layout('./layout/boilerplate.ejs') %>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <div class="row form-outerbox">
+    <div class="col-8 offset-2">         <!-- occupies the 8 out of 12 column and offset-2 gives margin to and centers the form -->
+            <h3 class="addMenu-heading mb-3">Add a New Menu</h3>
+            <form action="/menu" method="POST"  class=" needs-validation was-validated" novalidate="">
+                <div class="form-component-box">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text"
+                     id="name" name="menu[name]" 
+                     placeholder="enter name" 
+                     class="form-control" 
+                     required>
+                    <!-- Bootstrap's success and failure text, meaning text to be shown when the criteria gets or doesnot get meet -->
+                    <div class="valid-feedback">Name looks good.</div>
+                    <div class="invalid-feedback">Name is required</div>
+                </div>
+                <br>    
+                <div>
+                    <label for="description" class="form-label">Description</label>
+                    <textarea id="description" name="menu[description]" placeholder="enter description" rows="5" cols="10" class="form-control" required></textarea>
+                    <div class="valid-feedback">Description looks good.</div>
+                    <div class="invalid-feedback">Description is required</div>
+                </div><br>
+
+                <div>
+                    <label for="category" class="form-label">Category</label>
+                    <input list="categoryOptions" type="text" id="category" name="menu[category]" placeholder="enter category" class="form-control" required>
+                    <datalist id="categoryOptions">
+                        <option value="Vegetarian">
+                        <option value="Non-Vegetarian">
+                        <option value="Other">
+                    </datalist>
+                    <div class="invalid-feedback">Select any one Category</div>
+                </div>
+                <br>
+                <div>
+                    <label for="subcategory" class="form-label">Subcategory</label>
+                    <input list="subcategoryOptions" type="text" id="subcategory" name="menu[subcategory]" placeholder="enter subcategory" class="form-control" required>
+                    <datalist id="subcategoryOptions">
+                        <option value="Appetizer">
+                        <option value="Curry">
+                        <option value="Tandoor">
+                        <option value="Rice">
+                        <option value="Other">
+                    </datalist>
+                    <div class="invalid-feedback">Select any one subcategory</div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">  <!--col-md-4 meaning at medium screen and larger occupy 4 of 8 columns else occupy single column for both price and Spicy level -->
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" id="price" name="menu[price]" placeholder="enter the price" class="form-control" >
+                        <div class="invalid-feedback">Enter the amount</div>
+                    </div>
+                    <br>
+                    <div class="mb-3 col-md-4">
+                        <label for="spice_level" class="form-label">Spicy Level</label>
+                        <input list="spicyOptions" id="spice_level" type="text" name="menu[spice_level]" placeholder="enter spicy level" class="form-control" >
+                        <datalist id="spicyOptions">
+                            <option value="High">
+                            <option value="Mild">
+                            <option value="Low">
+                        </datalist>
+                    </div>
+                </div>
+                <br>
+                <div class="mb-4">
+                    <label for="image" class="form-label">Image Link</label>
+                    <input type="url" name="menu[image]" placeholder="enter image/url link" class="form-control" required>
+                    <div class="invalid-feedback">Url should be valid.</div>
+                </div>
+                
+                <div class="btn">
+                    <button class="btn btn-dark add-btn mt-4">Add</button>
+                 </div>
+                <br><br>  
+            </form>
+        </div>
+    </div>
+        
+
+    
+      
+    <!-- End Example Code -->
+  </body>

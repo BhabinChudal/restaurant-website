@@ -1,0 +1,54 @@
+
+<% layout('./layout/boilerplate.ejs') %>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <section class="section-reviews">
+
+        <div class="heading-box">
+            <h2 class="heading-tertiary">What do people say about us ? </h2>
+        </div>
+    
+    
+        <div class="review-container">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <!-- we need both of these .mp4 and .webm to run in different browser like chrome -->
+                    <source src="img/video.mp4" type="video/mp4">
+                    <source src="img/video.webm" type="video/webm" >
+                    Video is not supported in browser!
+                </video>
+            </div>
+    
+            <% for (let review of reviews){ %>
+                <div class="review">
+                    <figure class="review-photo-frame">
+                        <img src="<%= review.image.url %>" alt="customer-photo" class="review-photo">
+                        <figcaption class="review-caption"><%= review.customer %></figcaption>  <!-- don't forget to just take first and last name -->
+            
+                    </figure>
+            
+                    <div class="review-content">
+                        <p class="review-msg">
+                            <%= review.review %>
+                        </p>
+                        
+                        <p class="review-info ">
+                                <span class="rating"><%= review.rating %></span>
+                                <span class="post-date">Posted at: <%= review.date.toString().slice(3,16)  %></span>
+                        </p>
+                    </div>
+            
+                </div>
+        
+            <%} %>
+    
+            if(!allReview){
+                <div class="button-box">
+                    <a href="/review" class="red-btn">Load more &rarr;</a>
+                    
+                </div>
+            }
+        </div>
+        
+    </section>
+    
+</body>

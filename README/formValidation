@@ -1,0 +1,3 @@
+for the form Validation, you do have to include javascript file as well from the bootstrap.
+
+Note: static file/public file can be directly accessed, like '/css/style.css' from anywhere or any directory.

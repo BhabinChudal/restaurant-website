@@ -1,0 +1,30 @@
+.card-img-bottom{
+    height:100%;
+    background-size:cover;
+   
+}
+
+.card-body{
+    font-size: 2rem;
+}
+
+
+.card-btns{
+    display:flex;
+    justify-content: flex-start;
+}
+
+.show-button{
+    background-color: rgba(250, 44, 95, 0.7)!important;
+    transition:all .1s;
+}
+
+.edit-btn{
+    margin-right:2.5rem;
+    transition:all .1s;
+}
+
+.show-btn:hover{
+    background-color: rgba(250, 44, 95, 0.95)!important;
+    transform:scaleY(1.00005)!important;
+}

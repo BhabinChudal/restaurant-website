@@ -1,0 +1,95 @@
+<%- layout('./layout/boilerplate') -%>
+<body class="intropage-body">
+    <section class="section-intropage section">
+        <div class="section-intropage__content">
+            <h5 class="heading-primary"> 
+                Tawa Grill
+            </h5>
+
+            <h2 class="heading-secondary">
+                A place for authentic indian flavors
+            </h2>
+            <div class="btns">
+                <button type="button" class="btn btn-outline-light btn-order"><a href="#" class='btn-outline-light__link'>Order</a></button>
+                <button type="button" class="btn btn-outline-light btn-reservation"><a href="#" class='btn-outline-light__link'>Reservation</a></button>
+            </div>
+
+        </div>
+    </section>
+   
+    <section class="section-menupage section">
+        <div class="section-menupage__content">
+            <h2 class="heading-tertiary">Menu</h2>
+            <div class="menu-lists">
+                <a href="/menu/category/appetizer" class="menu-link">
+                    <div class="card photo-frame">
+                        <img src="/img/appetizer-1.jpg" class="card-img photo" alt="menu photo">
+                        <div class="card-img-overlay">
+                          <p class="card-text menu-card__content">appetizer</p>
+                        </div>
+                      </div>
+                </a>
+
+                <a href="/menu/category/rice" class="menu-link">
+                    <div class="card photo-frame">
+                        <img src="/img/biryani-rice2.jpg" class="card-img photo" alt="menu photo">
+                        <div class="card-img-overlay">
+                          <p class="card-text menu-card__content">rice/bread</p>
+                        </div>
+                      </div>
+                </a>
+
+                <a href="/menu/category/tandoor" class="menu-link">
+                    <div class="card photo-frame">
+                        <img src="/img/tandoor-chicken.jpg" class="card-img photo" alt="menu photo">
+                        <div class="card-img-overlay">
+                          <p class="card-text menu-card__content">tandoor</p>
+                        </div>
+                      </div>
+                </a>
+
+                <a href="/menu/category/curry" class="menu-link">
+                    <div class="card photo-frame">
+                        <img src="/img/butter-chicken.jpg" class="card-img photo" alt="menu photo">
+                        <div class="card-img-overlay">
+                          <p class="card-text menu-card__content">curries</p>
+                        </div>
+                      </div>
+                </a>
+
+                <a href="/menu/category/other" class="menu-link">
+                    <div class="card photo-frame">
+                        <img src="/img/pasta.jpg" class="card-img photo" alt="menu photo">
+                        <div class="card-img-overlay">
+                          <p class="card-text menu-card__content">Other</p>
+                        </div>
+                      </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section for the review -->
+     <section class="review-box">
+        <% const reviews = reviewsHome; %>
+        <% const allReview = isallReview; %>
+        <%- include("../includes/review.ejs", { allReview: allReview, reviews: reviews }) %>
+     </section>
+
+  
+
+    <section class="section-location section">
+        THIS IS OUR MAP SECTION.
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero. Atque recusandae consectetur perspiciatis iusto autem quasi eveniet expedita accusantium, esse repudiandae. Ad, eos ratione aperiam tenetur adipisci temporibus cum!
+
+    </section>
+</body>

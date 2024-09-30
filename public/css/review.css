@@ -1,0 +1,196 @@
+.section-reviews{
+    border:1px solid black;
+    position:relative;
+    padding:0 3rem;
+    overflow: scroll;
+    background-size:cover;
+    padding:10rem;
+    width:100%;
+    .bg-video{
+        height:100%;
+        width:100%;
+        overflow-y:scroll;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:-1;
+        opacity:.5; /* to give the blurness to video */
+    }
+
+    .bg-video__content{
+        height:100%;
+        width:100%;
+        overflow-y:scroll;
+        Object-fit:cover;
+    }
+}
+
+
+.heading-box{
+    text-align:center;
+    margin-bottom:6rem;
+}
+
+
+.review-container > *{
+    margin-bottom:6rem!important;
+
+
+}
+
+.button-box{
+    text-align:center;
+   
+}
+
+.red-btn:link,
+.red-btn:visited
+{
+    display:inline-block;
+    padding:1rem 3rem;
+    text-decoration:none;
+    color:#FF3366;
+    font-size:2.5rem;
+    transition:all .2s;
+}
+
+.red-btn:hover{
+    background-color:#FF3366;
+    color:white;
+    transform:translateY(-4px);
+    box-shadow:0 2rem 3rem rgba(0,0,0,0.6);
+    border-bottom:1px solid #FF3366;
+}
+
+.red-btn:active{
+    transform:translateY(0);
+    box-shadow:0 1rem 2rem rgba(0,0,0,0.3);
+}
+
+.review{
+    background-color:rgba(255, 255, 255, 0.9 );
+    /* to give width of review-box */
+    width:75%;
+    /* since block element, centers the review-box */
+    margin:0 auto;
+    padding: 6rem;
+    
+    /* adding box-shadow to show it is in 2-D plane */
+    box-shadow: 0 4rem 8rem rgba(0,0,0,.15);
+
+    border-radius: 6px;
+    /* font size of its children */
+    font-size:1.8rem;
+
+    /* distorting the shape of review-box */
+    transform: skewX(-15deg);
+
+
+    .review-photo-frame{
+        height:10rem;
+        width:10rem;
+        border-radius:50%;
+        float:left; /* To explain where the element shold be floated to .i.e towards the left of the content */
+        shape-outside:circle(50% at 50% 50%); /* to wrap the floated content around circle */
+        -webkit-shape-outside:circle(50% at 50% 50%); /* for browser like safari */
+        margin-right:4rem;
+        overflow:hidden;
+        box-shadow:2rem 1rem 3rem rgba(0,0,0,.15);
+        .review-photo{    
+            height:100%;
+            width:100%;
+            background-size: cover;
+            transform:scale(1.4);
+            transition: all .1s ease-in-out;
+            object-fit: cover;
+        }
+
+        .review-caption{
+            /* centering the caption in photo-frame */
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,10%); /* taking name bit down so that while hovering i can bring it to center */
+            opacity:0;
+            transition: all .1s ease-in-out;
+            color:#f1f3f5; 
+            text-transform:uppercase;
+            text-align:center;  /* to center the text with in review-caption box */
+        }
+    }
+ 
+
+    .review-content{
+        .review-msg{
+
+        
+        }
+
+        .review-info{
+
+            display:flex;
+            justify-content: space-between;
+            padding:1rem 1rem 0 0;
+
+
+
+
+        }
+    }
+
+}
+
+
+
+/* direct child selector of review to skew back to 0 by skewing with positive 15deg */
+.review > * {
+    transform: skewX(15deg); /* to make the box skewed at -15deg to 0 deg by skewing it with +15deg */
+
+}
+
+/* to blur the customer when hovering review-box */
+.review:hover .review-photo{
+    filter:blur(.3rem) brightness(80%); /* brightness below 100% is darker and above 100% is bright */
+    transform:scale(1); /* to shrink the photo when hovering */
+}
+
+/* to bring the review-caption to upward when hovering review-box */
+.review:hover .review-caption{
+    transform:translate(-50%,-50%);
+    opacity:1;
+}
+
+/**
+This section is for the css of review generator
+*/
+
+.review-generator-outerbox{
+    font-size:2.5rem;
+    display:flex!important;
+    flex-direction: column !important;
+
+}
+
+.review-generator-outerbox > *{
+    margin-bottom:1rem;
+    
+}
+
+.review-generator-heading{
+    font-size:3.5rem;
+    letter-spacing: .5rem;
+    text-align:center!important;
+    background-image:linear-gradient(to right,#FF3366,#eb2f64);
+    -webkit-background-clip: text;
+    color:transparent;
+}
+
+.review-generator-btn-box{
+    display:inline-block!important;
+    .review-generator-btn{
+        padding:0 1rem!important;
+    }
+}
+
+
+

@@ -1,0 +1,224 @@
+/* 
+:root{
+    --color-light-grey-1:#f8f9fa;
+    --color-light-grey-2:#f1f3f5;
+    --color-light-grey-3:#e9ecef;
+    --color-primary-grey:#adb5bd;
+    --color-dark-grey-1:#868e96;
+    --color-dark-grey-2:#495057;
+    --color-dark-grey-3:#343a40;
+    --color-dark-grey-4:#212529;
+    --color-light-indigo:#91a7ff;
+    --color-dark-indigo:#4c6ef5;
+
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-font:#ced4da;
+
+    --header-font-size:2.5rem;
+
+    --section-default-padding:2rem;
+
+    --header-z-index:200;
+
+    --sidebar-z-index:300;
+
+    --menu-z-index:3;
+    
+} */
+*,*::before,*::after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;  /* 1rem=10px */
+
+}
+
+.main{
+    margin:0;
+    padding-right:.75rem;
+    background-color:#e9ecef;
+    width:100vw;
+
+
+}
+
+
+.navbar{
+    background-color:#343a40!important;
+    width:100% !important;
+}
+
+.sidebar-box{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.user-navigation {
+    padding:1.6rem;
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center!important;
+
+}
+
+
+.logo-box{
+    height:6rem;
+    width:6rem;
+    border-radius:50%;
+    overflow:hidden;
+    margin-right:1.5rem;
+    display:inline-block;
+    .logo{
+        height:100%;
+        width:100%;
+    }
+}
+
+.navbar-brand::before{
+    content:"";
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:2px;
+    transform:scaleX(0);
+    background-color: #f8f9fa;
+    transition: transform .3s;
+    
+}
+
+.navbar-brand:hover::before{
+    /* scaleX explains the pseudo element grow from center along x-axis */
+    transform:scaleX(1);
+}
+
+.navbar-brand{
+    position:relative;
+    color:#f8f9fa!important;
+    font-size:2.5rem!important;
+    padding:0 .25rem!important;
+}
+
+
+.btn-outline-light{
+    font-size:2rem;
+}
+
+input[type='search']{
+    font-size:2rem;
+}
+
+button[type='button']{
+    font-size:2rem;
+
+}
+
+.search-box{
+    margin-bottom: 0.75rem;
+    
+}
+
+
+.navbar-toggler{
+    color:#f8f9fa!important;
+
+}
+
+
+
+.offcanvas{
+    background-image:linear-gradient(to right bottom,#343a40,#212529) !important;
+
+}
+.offcanvas-header{
+    background-color:#f8f9fa!important;
+}
+
+.nav-list{  
+    text-transform: uppercase;
+
+}
+
+.nav-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:1.5rem 0;
+    position:relative;
+}
+
+
+.nav-item::before{
+    /* this always comes with pseudo elements */
+    content:"";
+    /* to know the starting position of ::before */
+    position:absolute;
+    top:0;
+    left:0;
+    /* height is 100% because we just want to let it move along x while hovering */
+    height:100%;
+    width:1rem;
+    background-color:#343a40;
+
+    /* making initially scaling along Y-axis 0 so i can see the scaling along Y while hovering. */
+    transform:scaleY(0);
+    transition: transform .3s,width .5s ease-in .3s;
+
+    /* to not overlap the icon and text in sidebar */
+    z-index:-100;
+}
+
+/* after hovering the item , before pseudo element will be following */
+.nav-item:hover::before{
+    /* scaleY explains the pseudo element grow from center along y-axis */
+    transform:scaleY(1);
+    width:100%;
+    border-top:1px solid #e9ecef;
+    border-bottom:1px solid #e9ecef;
+   
+}
+
+.nav-item:not(:last-child){
+    margin-bottom:1.5rem;
+}
+
+.nav-link{
+    color:whitesmoke;
+    font-size:3.2rem;
+    width:50%;
+}
+
+.nav-link:hover{
+    color:whitesmoke!important;
+
+}
+
+.sidebar__icon-box{
+    height:4.8rem;
+    width:4.8rem;
+    .sidebar__icon{
+        fill:white;
+    }
+}
+
+.container{
+    margin:0;
+    padding:0;
+    flex:1;
+}
+
+.dropdown-menu{
+    background-color:#adb5bd!important;
+    font-size:2rem!important;
+}
+
+

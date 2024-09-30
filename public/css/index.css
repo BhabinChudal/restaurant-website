@@ -1,0 +1,40 @@
+.card-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    padding:6rem 6rem;
+}
+
+.card-frame{
+    padding:1rem;
+    border-radius:.5rem;
+    overflow:hidden;
+    margin-bottom:3rem; 
+    opacity:.8;
+}
+
+.card-frame:hover{
+    opacity:1;
+}
+
+
+.card-image{
+    height:75%!important;
+    width:100%;
+    border-radius:inherit;
+    object-fit:cover;
+}
+
+.card-text{
+    text-align:center;
+}
+
+
+.card-text__price{
+    font-size:2rem;
+}
+
+.card-link:link,
+.card-link:visited{
+    text-decoration:none;
+}

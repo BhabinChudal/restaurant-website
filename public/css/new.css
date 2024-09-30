@@ -1,0 +1,46 @@
+.addMenu-heading{
+    font-size:3rem;
+    font-weight:700;
+    display:inline-block;
+    background-image:linear-gradient(to right,#FF3366,#eb2f64);
+    -webkit-background-clip: text;
+    color:transparent;
+    
+}
+
+.form-outerbox{
+    font-size:2.5rem;
+    padding: 3rem 0;
+
+}
+
+
+
+.form-component-box{
+    font-size: 2.5rem;
+}
+
+input,textarea{
+    font-size:2rem!important;
+
+}
+
+input{
+    height:4rem;
+}
+
+.btn-dark{
+    padding:.5rem 1.5rem;
+    font-size:2.5rem;
+}
+
+.add-btn{
+    background-color: rgba(250, 44, 95, 0.8)!important;
+    transition:all .1s;
+}
+
+.add-btn:hover{
+    background-color: rgba(250, 44, 95, 0.95)!important;
+    transform:scaleY(1.00005)!important;
+}
+

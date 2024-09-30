@@ -1,0 +1,4 @@
+To place footer at bottom, what you can do is first in BODY of 'boilerplate' , make display:flex with 
+direction being at column and give 'min-height:100vh'so that the minimum height for bodyis 100vh.
+
+Noq in the content of container write flex:1 so our container grows as much as we want if height exceeds 100vh. and the footer remains below it.

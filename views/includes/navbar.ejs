@@ -1,0 +1,116 @@
+<body>
+    <!-- Example Code -->
+    <nav class="navbar bg-body-tertiary sticky-top  ">
+      <div class="container-fluid sidebar-box">
+          <div class="user-navigation ">
+            <div class="logo-box">
+              <img src="/img/tawagrills.jpg" alt="logo of tawa" class="logo">
+            </div>
+
+              <a class="navbar-brand" href="/menu">Home</a>
+              <a class="navbar-brand" href="#">Order</a>
+              <a class="navbar-brand" href="/registration">Reservation</a>
+              <a class="navbar-brand" href="/menu/new">Add new menu</a>
+          </div>
+
+          <div class="search-box user-navigation">
+            <form class="d-flex mt-3 search-form" role="search" action="/search" method="GET" >
+              <input class="form-control me-2"  type="search" placeholder="Food Name" aria-label="Search" name="menuname">
+              <button class="btn btn-outline-light type="submit>Search</button>
+            </form>
+          </div>
+
+          <div class="log-link">
+            <a class="navbar-brand" href="#">login</a>
+            <a class="navbar-brand" href="#">signup</a>
+            <a class="navbar-brand" href="#">logout</a>
+          </div>
+
+          <div class="sandwich-icon__box">
+            <div class="sandwich-icon">
+              <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+
+
+
+
+        <!-- outer-box in sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <!-- close button in sidebar -->
+          <div class="offcanvas-header btn-close__box">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- navigation body in sidebar -->
+          <nav class="offcanvas-body navigation">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 nav-list">
+              <li class="nav-item">
+                <label for="nav-anchor">
+                  <svg class="sidebar__icon-box sidebar__icon-contact">
+                    <use xlink:href="img/sprite.svg#icon-home3" class="sidebar__icon"></use>
+                  </svg>
+                </label> 
+                <a class="nav-link" href="/menu" id="nav-anchor">Home</a>
+              </li>
+
+
+
+              <li class="nav-item dropdown">
+                <label for="nav-anchor">
+                  <svg class="sidebar__icon-box sidebar__icon-menu">
+                    <use xlink:href="img/sprite.svg#icon-spoon-knife" class="sidebar__icon"></use>
+                  </svg>
+                </label>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-anchor">
+                  Menu
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/menu/category/appetizer">Appetizer</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/menu/category/Rice">Rice/Bread</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/menu/category/Tandoor">Tandoor</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/menu/category/Curry">Curries</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/menu/category/Other">Other</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <label for="nav-anchor">
+                  <svg class="sidebar__icon-box sidebar__icon-contact">
+                    <use xlink:href="img/sprite.svg#icon-phone" class="sidebar__icon"></use>
+                  </svg>
+                </label> 
+                <a class="nav-link" href="#" id="nav-anchor">contact</a>
+              </li>
+
+              <li class="nav-item">
+                <label for="nav-anchor">
+                  <svg class="sidebar__icon-box sidebar__icon-info">
+                    <use xlink:href="img/sprite.svg#icon-info" class="sidebar__icon"></use>
+                  </svg>
+                </label>
+                <a class="nav-link" href="#" id="nav-anchor">About Us</a>
+              </li>
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+</body> 

@@ -1,0 +1,70 @@
+.section-book{
+    padding:10rem 5rem!important;
+    width:99.5vw!important;
+    background-image:linear-gradient(to right bottom,#FF3366,#BA265D);
+
+}
+
+.section-book__background{
+    height:60rem;
+    width:80%;
+    margin:0 auto;
+    padding:0 2rem;
+    background-image: 
+    linear-gradient(105deg, 
+        rgba(248, 249, 250, 0.9) 0%, 
+        rgba(233, 236, 239, 0.9) 60%, 
+        transparent 40%), 
+        url('/img/booking-bg.jpg');
+    background-size:cover;
+    border-radius:3px;
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.3);
+}
+
+.section-book__content{
+    height:100%;
+    opacity:0.7;
+
+    .registration-form{
+        font-size:2rem;
+
+
+        .input-box{
+            position:relative;
+
+            padding:.7rem .5rem 0 .5rem;
+            width:50%;
+
+
+            .registration-label{
+                display:block;
+                width:80%;
+                position:absolute;
+                top: 20%;
+                left:1%;
+                opacity:0;
+                transition: all 0.3s ease; 
+            }
+        
+            input{
+                width:80%;
+                padding:.5rem;
+        
+            }
+
+            input:not(:placeholder-shown) + .registration-label {
+                top: 100%;  
+                left:2%;
+                opacity:1;
+
+            }
+            .add-btn{
+                font-size:2rem!important;
+                display:inline-block!important;
+                padding:.5rem!important;
+                margin-left:.5rem!important;
+            }
+        }
+    }
+}
+
